@@ -4,7 +4,7 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
-        <img src="./assets/icon.svg" alt="" height="40" class="d-inline-block align-text-center" />
+        <img src="./assets/logo.svg" alt="" height="40" class="d-inline-block align-text-center" />
         PokeVite
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -24,20 +24,22 @@
     </div>
   </nav>
 
-  <!-- CONTEÚDO DA APLICAÇÃO -->
-  <div class="main">
+  <div class="main container">
     <router-view></router-view>
   </div>
-  <!-- -->
-
+  
   <footer class="bg-primary text-light py-3 text-center">
     <div>
       <span>&copy {{new Date().getFullYear()}}</span>
     </div>
   </footer>
+
 </template>
 
 <style>
+.bg-dark {
+  background-color: #000;
+}
 footer {
   position: fixed;
   bottom: 0;
