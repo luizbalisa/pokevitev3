@@ -24,7 +24,7 @@
     </div>
   </nav>
 
-  <div class="main container">
+  <div class="main container container text-body-secondary">
     <router-view></router-view>
   </div>
   

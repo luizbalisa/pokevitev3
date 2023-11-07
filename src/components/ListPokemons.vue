@@ -1,16 +1,33 @@
-<template>
-    <li class="col-4">
-        <div class="card mb-4">
-            <span class="text-center">{{ pokemon.name }}</span>
-            <img class="p-10 card-img-top" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="" /> 
-        </div>
-    </li>
-</template>
-
 <script setup>
-const pokemon = defineProps(['name'])
+const pokemon = defineProps(["name", "urlBaseSvg"])
+
 </script>
 
-<style lang="scss" scoped>
+<template>
+    <div class="col-4 col-md-6 col-xl-3">
+        <div class="card p-2 mb-3 cardListPokemon">
+            <p class="text-center">{{ pokemon.name }}</p>
+            <img 
+            :src="urlBaseSvg" class="card-img-top" 
+            alt="..."
+            height="80"
+            />
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.cardListPokemon{
+    background: rgb(72,63,251);
+    background: radial-gradient(circle, rgba(94, 87, 232, 0.6) 0%, rgba(70,252,244,0.2) 100%);
+    cursor: pointer;
+}
+.cardListPokemon:hover{
+    background: rgb(72,63,251);
+    background: radial-gradient(circle, rgba(72,63,251,0.6) 0%, rgba(70,252,244,0.4) 100%);
+}
+.cardListPokemon img:hover{
+    padding: .1rem;
+}
 
 </style>
